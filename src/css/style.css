@@ -240,6 +240,43 @@ header h1 {
 }
 
 /*******************
+3.6. About page
+********************/
+.about {
+    background-image: url(../img/ruschita1.jpg);
+    height: 70vh;
+    flex-direction: column;
+}
+
+#about {
+    margin: 3rem 0;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+#about .prop {
+    display: flex;
+    align-items: center;
+}
+
+#about .prop p {
+    margin-left: 2rem;
+}
+
+#about .prop p:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+#about .prop img {
+    max-width: 400px;
+    height: auto;
+}
+
+/*******************
 3.6. Contact page
 ********************/
 main#contact {
