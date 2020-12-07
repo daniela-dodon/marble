@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap");
+
+/**************
+1. Variables
+***************/
+:root {
+    --light: #f2e9e4;
+    --primary: #e7d8c9;
+    --accent: #e6beae;
+    --dark: #b2967d;
+}
+
+/***********
+2. Global
+************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lora", serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**********
+3. Layout
+***********/
+
+/********************
+3.1. Navigation area
+*********************/
+#navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--dark);
+    z-index: 100;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#navbar ul li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+#navbar ul li a,
+#navbar a {
+    color: var(--primary);
+    background-color: var(--dark);
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* padding: 1.5em 1em; */
+    transition: all 400ms;
+}
+
+#navbar ul li a {
+    padding: 1.5em 1em;
+}
+
+#navbar a:hover {
+    color: var(--light);
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+    filter: brightness(150%);
+    color: var(--light);
+}
+
+/*******************
+3.2. Home page
+********************/
+/*********************
+3.2.1. Showcase area
+**********************/
+header {
+    background: url(/src/img/showcase.jpg) center center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: var(--light);
+    z-index: 10;
+    font-size: 3em;
+}
+
+/********************
+3.2.2. Info area
+*********************/
+#home-info .info-content {
+    justify-content: space-evenly;
+    min-height: 50vh;
+}
+
+/**************************
+3.2.3. Presentation area
+***************************/
+#presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 60vh;
+}
+
+#presentation .photos {
+    margin: 2rem 0;
+    display: grid;
+    justify-content: center;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+}
+
+/* #presentation .photos img {
+    max-width: 300px;
+} */
+
+#gallery {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/***********************
+3.2.3. Contact area
+************************/
+#contact-home {
+    margin-bottom: 3em;
+}
+
+#contact-home .data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 30vh;
+}
+
+/*******************
+3.3. Main footer
+********************/
+#main-footer {
+    /* position: absolute;
+    bottom: 0; */
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+/*******************
+3.4. Gallery page
+********************/
+#gallery {
+    margin: 2em 0;
+}
+
+/*******************
+3.5. Services page
+********************/
+#services {
+    margin: 2em 0;
+}
+
+#services h1 {
+    font-size: 2.6em;
+    margin-bottom: 0.3em;
+}
+
+#services .top,
+#services .program {
+    margin: 1.5em 0;
+}
+
+#services .program h2 {
+    margin-bottom: 0.3em;
+    font-size: 2.3em;
+}
+
+#services .program p {
+    margin: 0.2em 0;
+}
+
+#services .services {
+    margin-top: 3em;
+}
+
+#services .services h2 {
+    margin-bottom: 0.7em;
+    font-size: 2em;
+}
+
+#services .services .content {
+    display: grid;
+    width: 100%;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#services .services .content .card {
+    text-align: center;
+    color: var(--light);
+    background: rgb(95, 83, 97);
+    background: linear-gradient(
+        325deg,
+        rgba(95, 83, 97, 1) 0%,
+        rgba(98, 75, 83, 1) 11%,
+        rgba(243, 241, 244, 1) 72%
+    );
+}
+
+#services .services .content .card-body {
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+#services .services .content .price {
+    font-size: 1.2em;
+    font-weight: 500;
+    display: block;
+    margin: 0.2em 0;
+}
+
+/*******************
+3.6. Contact page
+********************/
+main#contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#contact section {
+    margin: 2em 1em;
+}
+
+#contact-form .contact-title {
+    margin-bottom: 2em;
+}
+
+#contact-form .form-group {
+    margin-bottom: 1.5em;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px var(--dark) solid;
+    border-radius: 3px;
+    transition: all 400ms;
+}
+
+#contact-form textarea {
+    height: 200px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+#contact-info .map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
+#contact-info .data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 30vh;
+}
+
+/**************
+4. Components
+***************/
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Aici vei pune proprietati generale */
+.button {
+    display: inline-block;
+    font-size: 18px;
+    color: var(--light);
+    background: var(--dark);
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.button:hover {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+.button-light {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* aici culori */
+.button-dark {
+    background-color: var(--dark);
+}
+
+/**********
+4.5. Cards
+***********/
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--dark);
+    /* background-color: $dark-l-7; */
+}
+
+.card-top,
+.card-body {
+    padding: 1em;
+}
+
+.card-top {
+    position: relative;
+    /* padding-bottom: 1em; */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/****************
+4.6. Typography
+*****************/
+.accent {
+    color: var(--accent);
+}
+
+.dark {
+    color: var(--dark);
+}
+#about-info h1 {
+    padding-bottom: 3em;
+}
+
+#about-info p {
+    padding-bottom: 1em;
+}
