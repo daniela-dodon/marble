@@ -5,9 +5,9 @@
 ***************/
 :root {
     --light: #f2e9e4;
-    --primary: #e7d8c9;
-    --accent: #e6beae;
-    --dark: #b2967d;
+    --primary: #e7c29e;
+    --accent: #daa26c;
+    --dark: #77634a;
 }
 
 /***********
@@ -95,20 +95,22 @@ a {
 header {
     background: url(/src/img/showcase.jpg) center center;
     background-size: cover;
+    background-color: var(--primary);
+    background-blend-mode: multiply;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header::before {
+/* header::before {
     content: "";
     display: block;
     position: absolute;
     width: 100%;
     height: 90vh;
     background-color: rgba(0, 0, 0, 0.3);
-}
+} */
 
 header h1 {
     color: var(--light);
@@ -191,69 +193,50 @@ header h1 {
 }
 
 /*******************
-3.5. Services page
+3.5. Structures page
 ********************/
-#services {
-    margin: 2em 0;
+.structures {
+    background-image: url(../img/marble-dark.jpg);
+    height: 70vh;
+    flex-direction: column;
 }
 
-#services h1 {
-    font-size: 2.6em;
-    margin-bottom: 0.3em;
-}
-
-#services .top,
-#services .program {
-    margin: 1.5em 0;
-}
-
-#services .program h2 {
-    margin-bottom: 0.3em;
-    font-size: 2.3em;
-}
-
-#services .program p {
-    margin: 0.2em 0;
-}
-
-#services .services {
-    margin-top: 3em;
-}
-
-#services .services h2 {
-    margin-bottom: 0.7em;
-    font-size: 2em;
-}
-
-#services .services .content {
-    display: grid;
-    width: 100%;
-    gap: 2em;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-#services .services .content .card {
-    text-align: center;
+.structures h2 {
     color: var(--light);
-    background: rgb(95, 83, 97);
-    background: linear-gradient(
-        325deg,
-        rgba(95, 83, 97, 1) 0%,
-        rgba(98, 75, 83, 1) 11%,
-        rgba(243, 241, 244, 1) 72%
-    );
 }
 
-#services .services .content .card-body {
-    padding-right: 2em;
-    padding-left: 2em;
+#structures {
+    margin-bottom: 3rem;
 }
 
-#services .services .content .price {
-    font-size: 1.2em;
-    font-weight: 500;
-    display: block;
-    margin: 0.2em 0;
+#structures h2 {
+    margin: 2rem 0;
+    font-size: 2.65rem;
+}
+
+#structures h3 {
+    margin: 1rem 0;
+    font-size: 1.9rem;
+}
+
+#structures .domain .prop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#structures .domain .prop img {
+    max-width: 300px;
+    height: auto;
+}
+
+#structures .domain .prop .content {
+    margin-left: 3rem;
+}
+
+#structures .domain .prop .content:nth-child(odd) {
+    margin-right: 3rem;
+    margin-left: 0;
 }
 
 /*******************

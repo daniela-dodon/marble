@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Galery | Marble Wonders</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="../node_modules/lightbox2/dist/css/lightbox.min.css"
+        />
+    </head>
+    <body>
+        <nav id="navbar">
+            <h1 class="logo">
+                <a href="index.html"
+                    >Marble - the luxury element between present and future</a
+                >
+            </h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="galery.html">Galery</a></li>
+                <li><a href="structures.html">Famous structures</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="container">
+            <section id="gallery">
+                <a
+                    href="img/photo1.jpeg"
+                    data-lightbox="gallery"
+                    data-title="imagine"
+                >
+                    <img class="img" src="img/photo1.jpeg" alt="" />
+                </a>
+                <a
+                    href="img/photo2.jpg"
+                    data-lightbox="gallery"
+                    data-title="alta"
+                >
+                    <img class="img" src="img/photo2.jpg" alt="" />
+                </a>
+                <a href="img/photo3.jpg" data-lightbox="gallery">
+                    <img class="img" src="img/photo3.jpg" alt="" />
+                </a>
+                <!-- <a href="img/photo4.jpg" data-lightbox="gallery">
+                    <img class="img" src="img/photo4.jpg" alt="" />
+                </a> -->
+                <a href="img/photo5.jpg" data-lightbox="gallery">
+                    <img class="img" src="img/photo5.jpg" alt="" />
+                </a>
+                <!-- <a href="img/photo6.jpg" data-lightbox="gallery">
+                    <img class="img" src="img/photo6.jpg" alt="" />
+                </a> -->
+                <a href="img/photo7.jpg" data-lightbox="gallery">
+                    <img class="img" src="img/photo7.jpg" alt="" />
+                </a>
+            </section>
+        </main>
+
+        <footer id="main-footer">
+            <p>&copy; 2021 Kraków</p>
+        </footer>
+
+        <script src="../node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+
+        <script>
+            lightbox.option({
+                resizeDuration: 400,
+                // albumLabel: document.querySelector(".img").attributes.item(2)
+                //     .nodeValue,
+                albumLabel: "",
+            });
+        </script>
+    </body>
+</html>
