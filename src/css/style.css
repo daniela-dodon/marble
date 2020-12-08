@@ -280,9 +280,10 @@ header h1 {
 3.7. Contact page
 ********************/
 #myMap {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
 }
+
 main#contact {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -324,17 +325,41 @@ main#contact {
     border-color: var(--accent);
 }
 
-#contact-info .map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-}
-
-#contact-info .data {
+#contact-form .data {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     height: 30vh;
+}
+
+#contact-info .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-info .team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#contact-info .team .members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+#contact-info .team .members h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+#contact-info .team .members h4 {
+    color: #444;
+}
+
+#contact-info .team .members .member img {
+    height: 350px;
 }
 
 /**************
