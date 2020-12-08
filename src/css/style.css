@@ -277,8 +277,12 @@ header h1 {
 }
 
 /*******************
-3.6. Contact page
+3.7. Contact page
 ********************/
+#myMap {
+    width: 100vw;
+    height: 50vh;
+}
 main#contact {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
